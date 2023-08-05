@@ -3,11 +3,12 @@ import { HomeComponent } from "./home/home.component";
 import { RouterModule } from "@angular/router";
 
 @Component({
+  // สำคัญ
   selector: "app-root",
   standalone: true,
-  imports: [HomeComponent,RouterModule],
+  imports: [HomeComponent, RouterModule],
   template: `
-    <main>
+  <main>
     <a [routerLink]="['/']">
       <header class="brand-name">
         <img
@@ -17,13 +18,12 @@ import { RouterModule } from "@angular/router";
           aria-hidden="true"
         />
       </header>
-      </a>
-      <section class="content">
+    </a>
+    <section class="content">
       <router-outlet></router-outlet>
-        <app-home></app-home>
-      </section>
-    </main>
-  `,
+    </section>
+  </main>
+`,
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
